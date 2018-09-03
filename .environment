@@ -1,0 +1,5 @@
+# Set PATH variable to Composer binaries.
+export PATH=/app/vendor/bin:$PATH
+
+# Add Behat config to environment.
+export BEHAT_PARAMS='{ "extensions": { "Behat\\MinkExtension": { "base_url": "http://'$PLATFORM_ENVIRONMENT'-'$PLATFORM_PROJECT'.us.platform.sh/" }, "Drupal\\DrupalExtension": { "drupal": { "drupal_root": "/app/web" }}}}'
